@@ -4,11 +4,11 @@
     let altura = parseFloat(prompt('Ingresa tu estatura en centimetros'))
 // bucle condicional para que el usuario solo ingrese números
     while(isNaN(altura)){
-        altura = parseFloat(prompt('Sólo se aceptan números, porfavor intentalo nuevamente'))
+        altura = parseFloat(prompt('Sólo se aceptan números, porfavor escribe tu estatura nuevamente'))
     }
     let peso = parseFloat(prompt('Ingresa tu peso en kilogramos')) 
     while(isNaN(peso)){
-        peso = parseFloat(prompt('Sólo se aceptan números, porfavor intentalo nuevamente'))
+        peso = parseFloat(prompt('Sólo se aceptan números, porfavor escribe tu peso nuevamente'))
     }
 // funcion para hacer el cálculo
     function CalcularImc(peso, altura){
