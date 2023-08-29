@@ -42,5 +42,5 @@ class Producto {
     if (valorFinal >= 80){
         valorFinal = valorFinal*0.9
     }else {}
-    alert('Felicidades! haz comprado '+ carrito.length+' Productos. con un total de '+ valorFinal + ' dólares')//salida de datos
+    alert('Felicidades! haz comprado '+ carrito.length+' Productos. con un total de '+ valorFinal.toFixed(2) + ' dólares')//salida de datos
     console.log(valorFinal)
