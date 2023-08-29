@@ -1,36 +1,46 @@
 
-//entrada de datos
-    const nombre = prompt('Cúal es tu nombre?')
-    let altura = parseFloat(prompt('Ingresa tu estatura en centimetros'))
-// bucle condicional para que el usuario solo ingrese números
-    while(isNaN(altura)){
-        altura = parseFloat(prompt('Sólo se aceptan números, porfavor escribe tu estatura nuevamente'))
+alert('Hoy 10% de descuento si superas los 80 dólares en el total')
+//Construcción del objeto
+class Producto {
+    constructor(nombre, precio, cantidad, valor) {
+      this.nombre = nombre
+      this.precio = precio
+      this.cantidad = cantidad
+      this.valor = valor
     }
-    let peso = parseFloat(prompt('Ingresa tu peso en kilogramos')) 
-    while(isNaN(peso)){
-        peso = parseFloat(prompt('Sólo se aceptan números, porfavor escribe tu peso nuevamente'))
+  }
+  //función para agregar los objetos
+  function agregarProducto() {
+    const nombre = prompt('ingresa el nombre del producto')//entrada de datos
+    const precio = parseFloat(prompt('Ingresa el precio del producto(dólares)'))//entrada de datos
+    const cantidad = parseFloat(prompt('Cuantos quieres agregar al carrito?'))//entrada de datos
+    const valor = precio * cantidad 
+    return new Producto(nombre, precio, cantidad, valor)
+  }
+  const carrito = []
+    //const item = agregarProducto();
+    //carrito.push(item);
+    console.log(carrito) //ver el contenido del array en consola
+  let comprarMas = true
+  while (comprarMas) {
+    const item = agregarProducto()
+    carrito.push(item) // agrega el objeto al array
+    const seguirComprando = prompt('Agregar otro producto al carrito? (si/no)')
+    if (seguirComprando === 'si') {
+      comprarMas = true
+    }else if(seguirComprando === 'no') {
+      comprarMas = false  
+    } else {
+       alert('La respuesta solo admite "si" o "no" por favor vuelva a intentar')
     }
-// funcion para hacer el cálculo
-    function CalcularImc(peso, altura){
-    const alturaMetros= altura/100
-    const valorImc = peso/(alturaMetros*alturaMetros)
-    return valorImc
-    }
-    const valorFinal = CalcularImc(peso,altura)
-    let conclusion
-    if (valorFinal < 18.5) {
-        conclusion = 'estás en un peso insuficiente, deberías considerar subir de peso'
-    } else if (valorFinal >= 18.5 && valorFinal < 24.9){
-        conclusion = 'estás en un peso saludable'
-    } else if (valorFinal >= 25 && valorFinal < 29.9){
-        conclusion = 'Tienes sobrepeso, deberías considerar bajar un poco de peso'
-    } else if(valorFinal >= 30 ){
-        conclusion = 'Tienes Obesidad, con riesgo de padecer enfermedades cardiovasculares'
-    }
-    else{
-        alert('No pudimos sacar el cálculo, vuelve a intentarlo')
-    }
-
-//salida de información 
-    const respuesta = 'hola '+nombre +' tu imc es de ' +valorFinal.toFixed(2) +' y ' +conclusion
-    parseFloat(alert(respuesta))
+  }
+    let total = 0 //declarar el valor total antes de las funciones 
+    const pre = carrito.map( preXcan => preXcan.valor)
+    pre.forEach(valordeproducto => { total = total + valordeproducto })
+    console.log(total)
+    let valorFinal = total
+    if (valorFinal >= 80){
+        valorFinal = valorFinal*0.9
+    }else {}
+    alert('Felicidades! haz comprado '+ carrito.length+' Productos. con un total de '+ valorFinal + ' dólares')//salida de datos
+    console.log(valorFinal)
