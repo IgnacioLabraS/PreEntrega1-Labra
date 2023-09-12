@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    height: 100vh;
+    background-color: rgb(40, 40, 67) !important;
+  }
+.tabla2 th{
+  text-align: center;
+}
+section h1{
+  color: white;
+  text-align: center;
+}
+td>a.eliminar{
+  cursor: pointer;
+  padding: 5px;
+  background-color: red;
+  color:white;
+  border-radius: 2px;
+  text-decoration: none;
+}

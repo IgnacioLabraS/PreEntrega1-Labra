@@ -1,46 +1,95 @@
-
-alert('Hoy 10% de descuento si superas los 80 dólares en el total')
+alert('Hoy 10% de descuento si superas los $1000 pesos en el total')
+//variables que recogen id's desde el HTML
+const registrarProducto = document.querySelector('#agregarProductos')
+const campoNombre = document.querySelector('#campoNombre')
+const campoCategoria = document.querySelector('#campoCategoria')
+const campoPrecio = document.querySelector('#campoPrecio')
+const campoCantidad = document.querySelector('#campoCantidad')
+const tablaParaMostrar = document.querySelector('#tabla')
+const mostarTablas = document.querySelector('#escondido')
+const infoDelTotal = document.querySelector('#totalInfo')
+const carrito = JSON.parse(localStorage.getItem('carrito')) || []
+      mostrarProductos()
 //Construcción del objeto
 class Producto {
-    constructor(nombre, precio, cantidad, valor) {
+    constructor({nombre, categoria, precio, cantidad, valor}) {
       this.nombre = nombre
+      this.categoria = categoria
       this.precio = precio
       this.cantidad = cantidad
       this.valor = valor
     }
   }
-  //función para agregar los objetos
-  function agregarProducto() {
-    const nombre = prompt('ingresa el nombre del producto')//entrada de datos
-    const precio = parseFloat(prompt('Ingresa el precio del producto(dólares)'))//entrada de datos
-    const cantidad = parseFloat(prompt('Cuantos quieres agregar al carrito?'))//entrada de datos
+//función para agregar los objetos
+    registrarProducto.onsubmit = e => {
+    e.preventDefault()
+    const nombre = campoNombre.value
+    const categoria = campoCategoria.value
+    const precio = campoPrecio.value
+    const cantidad = campoCantidad.value
     const valor = precio * cantidad 
-    return new Producto(nombre, precio, cantidad, valor)
+    const producto = new Producto({nombre,categoria, precio, cantidad, valor })
+    guardarEnCarrito(producto)
   }
-  const carrito = []
-    //const item = agregarProducto();
-    //carrito.push(item);
-    console.log(carrito) //ver el contenido del array en consola
-  let comprarMas = true
-  while (comprarMas) {
-    const item = agregarProducto()
-    carrito.push(item) // agrega el objeto al array
-    const seguirComprando = prompt('Agregar otro producto al carrito? (si/no)')
-    if (seguirComprando === 'si') {
-      comprarMas = true
-    }else if(seguirComprando === 'no') {
-      comprarMas = false  
-    } else {
-       alert('La respuesta solo admite "si" o "no" por favor vuelva a intentar')
+  //función para guardar los objetos en el array
+  function guardarEnCarrito(producto) {
+    carrito.push(producto)
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    mostrarProductos()
+  }
+   //función para mostrar los productos en una tabla html
+  function mostrarProductos(){
+   if (carrito.length > 0) {
+    mostarTablas.style.display="block"
+    let tablaBucle= ''
+      for(let i = 0; i < carrito.length; i++){  
+         tablaBucle += `<tr>
+                  <td>${carrito[i].nombre}</td>
+                  <td>${carrito[i].categoria}</td>
+                  <td>${carrito[i].precio}</td>
+                  <td>${carrito[i].cantidad}</td>
+                  <td>${carrito[i].valor}</td>
+                  <td align="center"><a class="eliminar" onclick="eliminarProductos(${i})"> Eliminar </a></td>
+                  </tr> `
+      }   
+        tablaParaMostrar.innerHTML = tablaBucle
+      sumadoraProductos()
     }
+}
+//función para sumar el valor total de los productos y crear una tabla
+  function sumadoraProductos(){ 
+  let total = 0 
+  const pre = carrito.map( preXcan => preXcan.valor)
+  pre.forEach(valordeproducto => { total = total + valordeproducto })
+  let valorFinal = total
+  if (valorFinal >= 1000){
+      valorFinal = valorFinal*0.9   
+         let mostrarValor = `<tr>
+             <td colspan="5" align="right"> Total</td>
+             <td colspan="1">${total}</td>
+             </tr>
+             <tr>
+             <td colspan="5" align="right"> Total con 10% descuento </td>
+             <td colspan="1">${valorFinal}</td>
+             </tr> `
+             infoDelTotal.innerHTML=mostrarValor
+  } else {
+         let mostrarValor = `<tr>
+         <td colspan="5" align="right"> Total</td>
+         <td colspan="1">${total}</td>
+         </tr>
+         <tr> `
+         infoDelTotal.innerHTML=mostrarValor  
   }
-    let total = 0 //declarar el valor total antes de las funciones 
-    const pre = carrito.map( preXcan => preXcan.valor)
-    pre.forEach(valordeproducto => { total = total + valordeproducto })
-    console.log(total)
-    let valorFinal = total
-    if (valorFinal >= 80){
-        valorFinal = valorFinal*0.9
-    }else {}
-    alert('Felicidades! haz comprado '+ carrito.length+' Productos. con un total de '+ valorFinal.toFixed(2) + ' dólares')//salida de datos
-    console.log(valorFinal)
+     console.log(total)
+     console.log(valorFinal)
+ }
+ //función para eliminar los datos del array y del localStorage
+ function eliminarProductos(i) {
+  if (i >= 0 && i < carrito.length) {
+      carrito.splice(i, 1)
+      localStorage.setItem('carrito', JSON.stringify(carrito))
+      mostrarProductos()
+  }
+}
+
