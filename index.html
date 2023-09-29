@@ -5,54 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>CursoJavaScript</title>
+    <title>Simulador Adidas</title>
 </head>
 <body>
-    <header>
-    </header>
+    <header> <!--Empieza header-->
+		<nav class="navbar  navbar-expand-lg bg-primary"><!--Empieza nav-->
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="./index.html">
+				<img src="img/adidas.png" alt="logo adidas" class="img-fluid img-logo">
+			  </a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="bi bi-list"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				  <li class="nav-item">
+					<a class="nav-link" href="#mostrarProductos">Productos</a>
+				  </li>
+				  <li class="nav-item">
+					<a id="mostrarCarritoBtn" class="nav-link" href="#escondido">Carrito</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav> <!--Termina nav-->
+          <div class="info"><p>Hoy por compras sobre $500 dólares 10% de descuento en tu monto final</p></div>
+	</header> <!--Termina header-->
     <main>
     <section class="container">
         <div class="row">
-            <h1> Agregar productos de farmacia a un carrito de compra de manera manual</h1>
+            <form id="filtroForm" class="form-inline" >
+            <div class="input-group mb-4 mt-4">
+                <label for="categoria" class="input-group-text">Filtrar por categoría:</label>
+                <select class="form-select " id="categoria">
+                  <option value="todos" selected>Todos</option>
+                  <option value="Camisetas">Camisetas</option>
+                  <option value="Zapatillas">Zapatillas</option>
+                  <option value="Pantalón">Pantalón</option>
+                  <option value="Chaquetas">Chaquetas</option>
+                  <option value="Polerón">Polerón</option>
+                  <option value="Short">Short</option>
+                </select>
+                <button type="submit" class="btn btn-outline-secondary">Filtrar</button>
+            </div> 
+            </form>
         </div>
-        <div class="row">
-            <div class="formulario col-md-6 offset-md-3 col-lg-6 offset-lg-3">
-                <form id="agregarProductos" method="post" class="mb-4">
-                    <!-- Nombre -->
-                    <div class="form-outline mb-1">
-                        <label class="form-label text-white fw-bold" for="campoNombre">Nombre</label>
-                        <input type="text" id="campoNombre" class="form-control" placeholder="Nombre"/>
-                    </div>
-                    <!-- Cátegoria -->
-                    <label class="form-label text-white fw-bold" for="campoCategoria">Categoria</label>
-                    <select id="campoCategoria" class="form-select form-outline mb-1" aria-label="Default select example">
-                        <option selected value="Sin Categoría">Elige una categoría</option>
-                        <option value="Analgesicos">Analgesicos</option>
-                        <option value="Jarabe">Jarabe</option>
-                        <option value="Capsulas">Capsulas</option>
-                        <option value="Implementos">Implementos</option>
-                        <option value="Suplementos">Suplementos</option>
-                        <option value="Vitaminas">Vitaminas</option>
-                      </select>
-                    <!-- Precio -->
-                    <div class="form-outline mb-1">
-                            <label class="form-label text-white fw-bold" for="campoPrecio">Precio</label>
-                            <input type="text" id="campoPrecio" class="form-control" placeholder="Precio" />
-                    </div>
-                    <!-- Cantidad -->
-                     <div class="form-outline mb-1">
-                        <label class="form-label text-white fw-bold" for="campoCantidad">Cantidad</label>
-                        <input type="number" id="campoCantidad" class="form-control" placeholder="Cantidad" />
-                        </div>
-                    <!-- Botón -->
-                    <div class="d-flex justify-content-end mt-2">
-                        <input type="submit" value="Registrar" class="btn btn-primary btn-block mb-4 fw-semibold "/>
-                    </div>
-              </form>
-            </div>
+        <div class="row" id="mostradorProductos">
         </div>
     </section>
     <section id="escondido" class="container" style="display: none;">
+        <div class="row mb-4 mt-4">
+            <h2 class="text-center">Carrito de compras</h2>
+        </div>
         <div class="row">
             <table class="table table-striped table-bordered">
                 <thead>
@@ -78,8 +82,10 @@
         </div>
     </section>
     </main>
-    <footer>
+    <footer class=" d-flex justify-content-center">
+        <img src="img/adidas.png" alt="logo adidas" class="img-fluid img-logo">
     </footer>
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -1,0 +1,210 @@
+[
+        {
+            "id": "1",
+            "nombre": "Camiseta Blanca Adidas",
+            "codigo": "CAM001",
+            "precio": "17.99",
+            "descripcion": "Camiseta blanca Adidas 3 rayas",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "2",
+            "nombre": "Camiseta Futbol Adidas",
+            "codigo": "CAM002",
+            "precio": "19.99",
+            "descripcion": "Camiseta de futbol Adidas negro con amarillo",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "3",
+            "nombre": "Polera OWN THE RUN",
+            "codigo": "CAM003",
+            "precio": "17.99",
+            "descripcion": "Polera OWN THE RUN  azul marino",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "4",
+            "nombre": "Zapatillas Retropy F90",
+            "codigo": "ZAP001",
+            "precio": "75.99",
+            "descripcion": "Zapatillas Negras Adidas Retropy F90",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "5",
+            "nombre": "Zapatillas de Senderismo Terrex",
+            "codigo": "ZAP002",
+            "precio": "84.99",
+            "descripcion": "Zapatillas de Senderismo Terrex negras",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "6",
+            "nombre": "Zapatillas Galaxy 6",
+            "codigo": "ZAP003",
+            "precio": "68.99",
+            "descripcion": "Zapatillas para running blancas",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "7",
+            "nombre": "Zapatillas Alphaboost V1",
+            "codigo": "ZAP004",
+            "precio": "72.99",
+            "descripcion": "Zapatillas Alphaboost V1 negras",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "8",
+            "nombre": "Zapatillas Predator Accuracy",
+            "codigo": "ZAP005",
+            "precio": "89.99",
+            "descripcion": "Zapatos de fútbol Predator Accuracy.1 Low",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "9",
+            "nombre": "Zapatillas Runfalcon",
+            "codigo": "ZAP006",
+            "precio": "62.99",
+            "descripcion": "Zapatillas runfalcon blancas",
+            "categoria": "Zapatillas"
+        },
+        {
+            "id": "10",
+            "nombre": "Pantalón Essentials",
+            "codigo": "PAN001",
+            "precio": "46.99",
+            "descripcion": "Pantalón Essentials logo Felpa negro",
+            "categoria": "Pantalón"
+        },
+        {
+            "id": "11",
+            "nombre": "Pantalón Deportivo Adicolor",
+            "codigo": "PAN002",
+            "precio": "42.99",
+            "descripcion": "Pantalón Deportivo Adicolor Classics SST",
+            "categoria": "Pantalón"
+        },
+        {
+            "id": "12",
+            "nombre": "Pantalón AEROREADY",
+            "codigo": "PAN003",
+            "precio": "42.99",
+            "descripcion": "Pantalón AEROREADY Essentials 3 Tiras",
+            "categoria": "Pantalón"
+        },
+        {
+            "id": "13",
+            "nombre": "Pantalón Future Icons",
+            "codigo": "PAN004",
+            "precio": "38.99",
+            "descripcion": "Pantalón Future Icons 3 Tiras",
+            "categoria": "Pantalón"
+        },
+        {
+            "id": "14",
+            "nombre": "Polerón con Capucha",
+            "codigo": "POL001",
+            "precio": "52.99",
+            "descripcion": "Polerón con Capucha Camo Series Infill",
+            "categoria": "Polerón"
+        },
+        {
+            "id": "15",
+            "nombre": "Polerón Adicolor Contempo",
+            "codigo": "POL002",
+            "precio": "60.99",
+            "descripcion": "Polerón Adicolor Contempo Crew French Terry",
+            "categoria": "Polerón"
+        },
+        {
+            "id": "16",
+            "nombre": "Polerón Adicolor Classics Trifolio",
+            "codigo": "POL003",
+            "precio": "49.99",
+            "descripcion": "Polerón Adicolor Classics Trifolio Cuello Redondo",
+            "categoria": "Polerón"
+        },
+        {
+            "id": "17",
+            "nombre": "Polerón con Capucha Trifolio ",
+            "codigo": "POL004",
+            "precio": "10.99",
+            "descripcion": "Polerón con Capucha Trifolio Essentials Cierre Frontal",
+            "categoria": "Polerón"
+        },
+        {
+            "id": "18",
+            "nombre": "Chaqueta de Invierno Colo-Colo ",
+            "codigo": "CHA001",
+            "precio": "105.99",
+            "descripcion": "Chaqueta de Invierno Colo-Colo Tiro",
+            "categoria": "Chaquetas"
+        },
+        {
+            "id": "19",
+            "nombre": "Chaqueta Reversible",
+            "codigo": "CHA002",
+            "precio": "84.99",
+            "descripcion": "Chaqueta Reversible Anthem Colombia",
+            "categoria": "Chaquetas"
+        },
+        {
+            "id": "20",
+            "nombre": "Chaqueta Real Madrid Icon",
+            "codigo": "CHA003",
+            "precio": "99.99",
+            "descripcion": "Chaqueta Real Madrid Icon color azul blanco amarillo",
+            "categoria": "Chaquetas"
+        },
+        {
+            "id": "21",
+            "nombre": "Chaqueta Essentials Insulated",
+            "codigo": "CHA004",
+            "precio": "129.99",
+            "descripcion": "Chaqueta Essentials Insulated de senderismo ",
+            "categoria": "Chaquetas"
+        },
+        {
+            "id": "22",
+            "nombre": "Polera Own the Run",
+            "codigo": "CAM004",
+            "precio": "19.99",
+            "descripcion": "Polera Own the Run Varios colores",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "23",
+            "nombre": "Polera AEROREADY",
+            "codigo": "CAM005",
+            "precio": "19.99",
+            "descripcion": "Polera AEROREADY Designed 2 Move Feelready Sport",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "24",
+            "nombre": "Polera Essentials Trifolio",
+            "codigo": "CAM006",
+            "precio": "19.99",
+            "descripcion": "Polera Essentials Trifolio varios colores",
+            "categoria": "Camisetas"
+        },
+        {
+            "id": "25",
+            "nombre": "Shorts Essentials 3 Tiras",
+            "codigo": "SHO001",
+            "precio": "29.99",
+            "descripcion": "Shorts Essentials 3 Tiras AEROREADY negro",
+            "categoria": "Short"
+        },
+        {
+            "id": "26",
+            "nombre": "Shorts Squadra 21",
+            "codigo": "SHO002",
+            "precio": "27.99",
+            "descripcion": "Shorts Squadra 21 blancos",
+            "categoria": "Short"
+        }
+    ]

@@ -1,24 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    height: 100vh;
-    background-color: rgb(40, 40, 67) !important;
-  }
-.tabla2 th{
+  height: 100vh;
+}
+
+header {
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+}
+.info{
+  background-color: #fff000;
+}
+.info p{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 10px;
+}
+header nav.navbar.bg-primary {
+  background-color: #000000 !important;
+}
+
+header nav.navbar.bg-primary div.container-fluid a.navbar-brand img.img-logo {
+  width: 25%;
+  padding: 0 30px;
+}
+header nav.navbar.bg-primary div.container-fluid .navbar-nav .nav-item {
+  padding: 0 30px;
+}
+header nav.navbar.bg-primary div.container-fluid .navbar-nav .nav-item a.nav-link {
+  color: white !important;
+  border-bottom: 3px solid #040414;
+  transition: all 0.6s ease-in-out;
+}
+header nav.navbar.bg-primary div.container-fluid .navbar-nav .nav-item a.nav-link:hover {
+  color: #fff000 !important;
+  border-bottom: 3px solid #fff000;
+}
+button.btn.btn-outline-secondary{
+  background-color: black;
+  color: white;
+}
+button.btn.btn-outline-secondary{
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  padding: 0 40px;
+}
+label.input-group-text{
+  background-color: #000000;
+  color: #ffffff;
+}
+button.btn.btn-outline-secondary:hover{
+  background-color: #fffb00;
+  color: #000000;
+}
+
+div.card{
+  border: 0;
+  border-radius: 0px;
+  --bs-card-inner-border-radius: none;
+}
+div.card-body{
+  padding: 5px 0;
+  margin-bottom: 50px;
+}
+div.card-footer{
+  padding: 0;
+}
+span.categoriaP{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 5px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+}
+h5.nombreP{
+  font-size: 18px;
+  font-weight: 700;
+}
+h5.precioP{
+  font-size: 24px;
+  background-color: #fff000;
+  padding: 2px;
+  text-align: center;
+  margin-bottom: 0;
+}
+p.descripcionP{
+  height: 50px;
+}
+a.agregar-producto{
+  width: 100%;
+  background-color: #000000;
+  border-radius: 0px;
+  padding: 10px;
+  border: 5px solid #000000;
+}
+a.agregar-producto:hover{
+  background-color: #fff000;
+  color: #000000;
+  border: 5px solid #000000;
+}
+
+/* */
+.tabla2 th {
   text-align: center;
 }
-section h1{
+
+section h1 {
   color: white;
   text-align: center;
 }
-td>a.eliminar{
+td>a.eliminar {
   cursor: pointer;
   padding: 5px;
-  background-color: red;
-  color:white;
+  background-color: #d33;
+  color: white;
   border-radius: 2px;
   text-decoration: none;
+}
+a.comprar{
+  width: 100%;
+  background-color: #000000;
+  border-radius: 0px;
+  padding: 10px;
+  border: 5px solid #000000;
+}
+a.comprar:hover{
+  background-color: #fff000;
+  color:#000000;
+  border: 5px solid #000000;
+}
+
+footer{
+  background-color: #000000;
+}
+footer img{
+  width: 150px;
+  padding: 20px 30px;
 }
