@@ -25,7 +25,8 @@ mostrarCarritoBtn.addEventListener('click', () => {
 
 //función para mostrar la consulta al json con los productos y mostrarlos en pantalla
 function mostrarDiv() {
-  fetch('/js/productos.json')
+  const url='./productos.json'
+  fetch(url)
     .then(res => res.json())
     .then(obj => {
       const productos = obj
@@ -182,7 +183,7 @@ function sumadoraProductos(){
   }
      return valorFinal
  }
- // función que muestra alerta al confirmar la compra 
+ // función que muestra alerta al confirmar la compra y refresca la página al finalizar
  function confirmarCompra(valorFinal){
   Swal.fire({
     title: 'Confirmar compra',
